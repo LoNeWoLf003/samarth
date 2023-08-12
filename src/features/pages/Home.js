@@ -1,5 +1,5 @@
 import NavBar from "../navbar/NavBar";
-import ProductList from "../product-list/ProductList";
+import ProductList from "../product-list/components/ProductList";
 
 function Home() {
     return ( 
