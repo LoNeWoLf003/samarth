@@ -4,13 +4,13 @@ import "./App.css";
 import Home from "./features/pages/Home";
 import LoginPage from "./features/pages/LoginPage";
 import SignUpPage from "./features/pages/SignUpPage";
-
 import {
   createBrowserRouter,
   RouterProvider,
   Route,
   Link,
 } from "react-router-dom";
+import { Cart } from "./features/cart/cart";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/signup",
     element: <SignUpPage />,
+  },
+  {
+    path: "/cart",
+    element: <Cart />,
   },
 ]);
 
