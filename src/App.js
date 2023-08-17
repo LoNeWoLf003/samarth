@@ -1,4 +1,3 @@
-import { Counter } from './features/counter/Counter';
 import './App.css';
 import Home from './features/pages/Home';
 import LoginPage from './features/pages/LoginPage';
@@ -7,10 +6,7 @@ import SignupPage from './features/pages/SignUpPage';
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
-  Link,
 } from 'react-router-dom';
-import Cart from './features/cart/cart';
 import CartPage from './features/pages/CartPage';
 import Checkout from './features/pages/Checkout';
 import ProductDetailPage from './features/pages/ProductDetailPage';
@@ -21,9 +17,7 @@ import { selectLoggedInUser } from './features/auth/AuthSlice';
 import { fetchItemsByUserIdAsync } from './features/cart/cartSlice';
 import PageNotFound from './features/pages/404';
 import OrderSuccessPage from './features/pages/OrderSuccessPage';
-import UserOrders from './features/user/components/userOrders';
 import UserOrdersPage from './features/pages/UserOrdersPage';
-import UserProfile from './features/user/components/userProfile';
 import UserProfilePage from './features/pages/UserProfilePage';
 import { fetchLoggedInUserAsync } from './features/user/userSlice';
 import Logout from './features/auth/components/Logout';
