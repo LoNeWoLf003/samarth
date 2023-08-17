@@ -23,6 +23,9 @@ import PageNotFound from './features/pages/404';
 import OrderSuccessPage from './features/pages/OrderSuccessPage';
 import UserOrders from './features/user/components/userOrders';
 import UserOrdersPage from './features/pages/UserOrdersPage';
+import UserProfile from './features/user/components/userProfile';
+import UserProfilePage from './features/pages/UserProfilePage';
+import { fetchLoggedInUserAsync } from './features/user/userSlice';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -74,7 +77,12 @@ const router = createBrowserRouter([
     path: '/orders',
     element: (
       <UserOrdersPage></UserOrdersPage>
-      // we will add Page later right now using component directly.
+    ),
+  },
+  {
+    path: '/profile',
+    element: (
+      <UserProfilePage></UserProfilePage>
     ),
   },
   {
@@ -93,6 +101,7 @@ function App() {
   useEffect(()=>{
     if(user){
       dispatch(fetchItemsByUserIdAsync(user.id))
+      dispatch(fetchLoggedInUserAsync(user.id))
     }
   },[dispatch, user])
 
