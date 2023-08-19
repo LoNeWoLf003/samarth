@@ -24,6 +24,7 @@ import ProtectedAdmin from './features/auth/components/ProtectedAdmin';
 import AdminHome from './features/pages/AdminHome';
 import AdminProductDetailPage from './features/pages/AdminProductDetailPage';
 import AdminProductFormPage from './features/pages/AdminProductFormPage';
+import AdminOrdersPage from './features/pages/AdminOrdersPage';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -86,6 +87,14 @@ const router = createBrowserRouter([
     element: (
       <ProtectedAdmin>
         <AdminProductFormPage></AdminProductFormPage>
+      </ProtectedAdmin>
+    ),
+  },
+  {
+    path: '/admin/orders',
+    element: (
+      <ProtectedAdmin>
+        <AdminOrdersPage></AdminOrdersPage>
       </ProtectedAdmin>
     ),
   },

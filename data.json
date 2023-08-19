@@ -2506,6 +2506,26 @@
       "quantity": 1,
       "user": 3,
       "id": 3
+    },
+    {
+      "title": "Crystal chandelier maria theresa for 12 light",
+      "description": "Crystal chandelier maria theresa for 12 light",
+      "price": 47,
+      "discountPercentage": 16,
+      "rating": 4.74,
+      "stock": 133,
+      "brand": "YIOSI",
+      "category": "lighting",
+      "thumbnail": "https://i.dummyjson.com/data/products/100/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/100/1.jpg",
+        "https://i.dummyjson.com/data/products/100/2.jpg",
+        "https://i.dummyjson.com/data/products/100/3.jpg",
+        "https://i.dummyjson.com/data/products/100/thumbnail.jpg"
+      ],
+      "quantity": 1,
+      "user": 4,
+      "id": 4
     }
   ],
   "orders": [
@@ -2569,7 +2589,7 @@
         "state": "Karnataka",
         "pinCode": "560034"
       },
-      "status": "pending",
+      "status": "delivered",
       "id": 1
     },
     {
@@ -2632,7 +2652,7 @@
         "state": "Karnataka",
         "pinCode": "560034"
       },
-      "status": "pending",
+      "status": "delivered",
       "id": 2
     },
     {
@@ -2702,7 +2722,7 @@
         "state": "Maharastra",
         "pinCode": "220001"
       },
-      "status": "pending",
+      "status": "dispatched",
       "id": 3
     },
     {
@@ -2766,7 +2786,7 @@
         "state": "Karnataka",
         "pinCode": "560034"
       },
-      "status": "pending",
+      "status": "cancelled",
       "id": 4
     },
     {
@@ -2829,7 +2849,7 @@
         "state": "Karnataka",
         "pinCode": "560034"
       },
-      "status": "pending",
+      "status": "delivered",
       "id": 5
     },
     {
@@ -2885,7 +2905,7 @@
         "state": "WB",
         "pinCode": "700041"
       },
-      "status": "pending",
+      "status": "delivered",
       "id": 6
     },
     {
@@ -2941,7 +2961,7 @@
         "state": "WB",
         "pinCode": "700041"
       },
-      "status": "pending",
+      "status": "delivered",
       "id": 7
     },
     {
@@ -3018,7 +3038,7 @@
         "state": "WB",
         "pinCode": "700041"
       },
-      "status": "pending",
+      "status": "dispatched",
       "id": 8
     },
     {
@@ -3070,8 +3090,115 @@
         "state": "WB",
         "pinCode": "700041"
       },
-      "status": "pending",
+      "status": "cancelled",
       "id": 9
+    },
+    {
+      "items": [
+        {
+          "title": "Samsung Universe 9",
+          "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+          "price": 1249,
+          "discountPercentage": 15.46,
+          "rating": 4.09,
+          "stock": 36,
+          "brand": "Samsung",
+          "category": "smartphones",
+          "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/3/1.jpg"
+          ],
+          "quantity": 1,
+          "user": 3,
+          "id": 3
+        }
+      ],
+      "totalAmount": 1056,
+      "totalItems": 1,
+      "user": {
+        "email": "admin@gmail.com",
+        "password": "Qwerty123",
+        "addresses": [
+          {
+            "name": "Sayak SenGupta",
+            "email": "sayaksengupta2110@gmail.com",
+            "phone": "8240542475",
+            "street": "abcd",
+            "city": "Kolkata",
+            "state": "WB",
+            "pinCode": "700041"
+          }
+        ],
+        "role": "admin",
+        "id": 3
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Sayak SenGupta",
+        "email": "sayaksengupta2110@gmail.com",
+        "phone": "8240542475",
+        "street": "abcd",
+        "city": "Kolkata",
+        "state": "WB",
+        "pinCode": "700041"
+      },
+      "status": "cancelled",
+      "id": 10
+    },
+    {
+      "items": [
+        {
+          "title": "Crystal chandelier maria theresa for 12 light",
+          "description": "Crystal chandelier maria theresa for 12 light",
+          "price": 47,
+          "discountPercentage": 16,
+          "rating": 4.74,
+          "stock": 133,
+          "brand": "YIOSI",
+          "category": "lighting",
+          "thumbnail": "https://i.dummyjson.com/data/products/100/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/100/1.jpg",
+            "https://i.dummyjson.com/data/products/100/2.jpg",
+            "https://i.dummyjson.com/data/products/100/3.jpg",
+            "https://i.dummyjson.com/data/products/100/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": 4,
+          "id": 4
+        }
+      ],
+      "totalAmount": 39,
+      "totalItems": 1,
+      "user": {
+        "email": "sayaksengupta2110@gmail.com",
+        "password": "abcd123AB",
+        "addresses": [
+          {
+            "name": "Sayak SenGupta",
+            "email": "sayaksengupta2110@gmail.com",
+            "phone": "8240542475",
+            "street": "abcd",
+            "city": "Kolkata",
+            "state": "WB",
+            "pinCode": "700041"
+          }
+        ],
+        "role": "user",
+        "id": 4
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Sayak SenGupta",
+        "email": "sayaksengupta2110@gmail.com",
+        "phone": "8240542475",
+        "street": "abcd",
+        "city": "Kolkata",
+        "state": "WB",
+        "pinCode": "700041"
+      },
+      "status": "dispatched",
+      "id": 11
     }
   ]
 }
