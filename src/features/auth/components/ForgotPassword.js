@@ -20,7 +20,7 @@ export default function ForgotPassword() {
             alt="Your Company"
           />
           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-            Enter email to reset password
+            Enter email to reset your password
           </h2>
         </div>
 
