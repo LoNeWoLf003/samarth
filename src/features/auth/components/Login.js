@@ -3,7 +3,7 @@ import { selectError, selectLoggedInUser } from '../AuthSlice';
 import { Link, Navigate } from 'react-router-dom';
 import { checkUserAsync } from '../AuthSlice';
 import { useForm } from 'react-hook-form';
-
+import logoimg from '../../../assets/logo.png';
 export default function Login() {
   const dispatch = useDispatch();
   const error = useSelector(selectError);
@@ -14,7 +14,6 @@ export default function Login() {
     formState: { errors },
   } = useForm();
 
-  console.log(errors);
 
   return (
     <>
@@ -23,8 +22,8 @@ export default function Login() {
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img
             className="mx-auto h-10 w-auto"
-            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-            alt="Your Company"
+            src={logoimg}
+            alt="Samarth"
           />
           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
             Log in to your account
