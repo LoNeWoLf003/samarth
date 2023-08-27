@@ -9,11 +9,12 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { selectItems } from '../cart/cartSlice';
 import { selectLoggedInUser } from '../auth/AuthSlice';
-import logoimg from '../../assets/logo.png'
+
 
 const navigation = [
-  { name: 'Products', link: '/', user: true },
-  { name: 'Products', link: '/admin', admin: true },
+  { name: 'Dashboard', link: '#', user: true },
+  { name: 'Team', link: '#', user: true },
+  { name: 'Admin', link: '/admin', admin: true },
   { name: 'Orders', link: '/admin/orders', admin: true },
 
 ];
@@ -44,7 +45,7 @@ function NavBar({ children }) {
                       <Link to="/">
                         <img
                           className="h-8 w-8"
-                          src={logoimg}
+                          src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
                           alt="Your Company"
                         />
                       </Link>
@@ -183,7 +184,6 @@ function NavBar({ children }) {
                     </div>
                     <div className="ml-3">
                       <div className="text-base font-medium leading-none text-white">
-                        {/* this should come from userInfo */}
                         {user.name}
                       </div>
                       <div className="text-sm font-medium leading-none text-gray-400">

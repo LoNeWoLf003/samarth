@@ -10,8 +10,7 @@ import {
 } from '../../product-list/productSlice';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import Modal from '../../common/Modal';
+import { useEffect } from 'react';
 
 function ProductForm() {
   const {
@@ -26,7 +25,6 @@ function ProductForm() {
   const dispatch = useDispatch();
   const params = useParams();
   const selectedProduct = useSelector(selectProductById);
-  const [openModal, setOpenModal] = useState(null);
 
   useEffect(() => {
     if (params.id) {
@@ -52,14 +50,14 @@ function ProductForm() {
     }
   }, [selectedProduct, params.id, setValue]);
 
-  const handleDelete = () => {
-    const product = { ...selectedProduct };
+
+  const handleDelete = () =>{
+    const product = {...selectedProduct};
     product.deleted = true;
     dispatch(updateProductAsync(product));
-  };
+  }
 
   return (
-    <>
     <form
       noValidate
       onSubmit={handleSubmit((data) => {
@@ -99,8 +97,6 @@ function ProductForm() {
           </h2>
 
           <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-          {selectedProduct.deleted && <h2 className="text-red-500 sm:col-span-6">This product is deleted</h2>}
-
             <div className="sm:col-span-6">
               <label
                 htmlFor="title"
@@ -160,7 +156,7 @@ function ProductForm() {
                 >
                   <option value="">--choose brand--</option>
                   {brands.map((brand) => (
-                    <option key={brand.value} value={brand.value}>{brand.label}</option>
+                    <option value={brand.value}>{brand.label}</option>
                   ))}
                 </select>
               </div>
@@ -181,7 +177,7 @@ function ProductForm() {
                 >
                   <option value="">--choose category--</option>
                   {categories.map((category) => (
-                    <option key={category.value} value={category.value}>{category.label}</option>
+                    <option value={category.value}>{category.label}</option>
                   ))}
                 </select>
               </div>
@@ -420,7 +416,6 @@ function ProductForm() {
           </div>
         </div>
       </div>
-    
 
       <div className="mt-6 flex items-center justify-end gap-x-6">
         <button
@@ -430,14 +425,12 @@ function ProductForm() {
           Cancel
         </button>
 
-        {selectedProduct && !selectedProduct.deleted && (
-          <button
-            onClick={(e)=>{e.preventDefault();setOpenModal(true)}}
-            className="rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-          >
-            Delete
-          </button>
-        )}
+       {selectedProduct && <button
+          onClick={handleDelete}
+          className="rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+        >
+          Delete
+        </button>}
 
         <button
           type="submit"
@@ -447,16 +440,6 @@ function ProductForm() {
         </button>
       </div>
     </form>
-    <Modal
-        title={`Delete ${selectedProduct.title}`}
-        message="Are you sure you want to delete this Product ?"
-        dangerOption="Delete"
-        cancelOption="Cancel"
-        dangerAction={handleDelete}
-        cancelAction={() => setOpenModal(null)}
-        showModal={openModal}
-      ></Modal>
-    </>
   );
 }
 
